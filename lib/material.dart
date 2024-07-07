@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:tourism_app/helper/constant.dart';
 
@@ -23,8 +24,9 @@ class MyMaterial extends StatelessWidget {
         ],
       ),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        textTheme: GoogleFonts.josefinSansTextTheme(),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(kPrimaryColor),
