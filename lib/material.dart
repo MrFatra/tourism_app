@@ -4,7 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:tourism_app/helper/constant.dart';
 import 'package:tourism_app/widgets/appbar.dart';
 
-import 'screens/home.dart';
+import 'screens/home/home.dart';
 
 class MyMaterial extends StatelessWidget {
   const MyMaterial({super.key});
@@ -34,7 +34,7 @@ class MyMaterial extends StatelessWidget {
             foregroundColor: WidgetStateProperty.all(Colors.white),
             elevation: WidgetStateProperty.all(5),
             padding:
-                WidgetStateProperty.all(EdgeInsets.symmetric(vertical: 20)),
+                WidgetStateProperty.all(const EdgeInsets.symmetric(vertical: 20)),
             shape: WidgetStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
@@ -44,9 +44,9 @@ class MyMaterial extends StatelessWidget {
         ),
       ),
       home: Builder(builder: (context) {
-        return Scaffold(
+        return const Scaffold(
           appBar: Navbar(init: true),
-          body: const Home(),
+          body: Home(),
         );
       }),
     );
