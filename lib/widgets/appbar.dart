@@ -15,7 +15,7 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       leading: ResponsiveBreakpoints.of(context).between(PHONE, TABLET)
           ? null
-          : SizedBox(),
+          : const SizedBox(),
       leadingWidth:
           ResponsiveBreakpoints.of(context).between(PHONE, TABLET) ? 0 : 25,
       title: Row(
@@ -30,22 +30,22 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
           ),
           ResponsiveVisibility(
             visible: false,
-            visibleConditions: [Condition.equals(name: DESKTOP)],
+            visibleConditions: const [Condition.equals(name: DESKTOP)],
             child: Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
                     onPressed: () => {},
-                    child: Text('Home'),
+                    child: const Text('Home'),
                   ),
                   TextButton(
                     onPressed: () => {},
-                    child: Text('About'),
+                    child: const Text('About'),
                   ),
                   TextButton(
                     onPressed: () => {},
-                    child: Text('Contact'),
+                    child: const Text('Contact'),
                   ),
                 ],
               ),
@@ -56,19 +56,19 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         ResponsiveVisibility(
           visible: false,
-          visibleConditions: [Condition.largerThan(name: TABLET)],
+          visibleConditions: const [Condition.largerThan(name: TABLET)],
           child: Container(
-            margin: EdgeInsets.only(right: 50),
+            margin: const EdgeInsets.only(right: 50),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(onPressed: () => {}, child: Text('Register')),
+                TextButton(onPressed: () => {}, child: const Text('Register')),
                 ElevatedButton(
                   onPressed: () => {},
-                  child: Text('Login'),
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       elevation: 0),
+                  child: const Text('Login'),
                 ),
               ],
             ),
@@ -76,9 +76,9 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
         ),
         ResponsiveVisibility(
           visible: false,
-          visibleConditions: [Condition.smallerThan(name: DESKTOP)],
+          visibleConditions: const [Condition.smallerThan(name: DESKTOP)],
           child: IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: () {
               showModalBottomSheet(
                 context: context,
@@ -88,18 +88,18 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       ListTile(
-                        leading: Icon(Icons.home),
-                        title: Text('Home'),
+                        leading: const Icon(Icons.home),
+                        title: const Text('Home'),
                         onTap: () {},
                       ),
                       ListTile(
-                        leading: Icon(Icons.info),
-                        title: Text('About'),
+                        leading: const Icon(Icons.info),
+                        title: const Text('About'),
                         onTap: () {},
                       ),
                       ListTile(
-                        leading: Icon(Icons.contact_mail),
-                        title: Text('Contact'),
+                        leading: const Icon(Icons.contact_mail),
+                        title: const Text('Contact'),
                         onTap: () {},
                       ),
                     ],
@@ -122,5 +122,5 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(80);
+  Size get preferredSize => const Size.fromHeight(80);
 }
