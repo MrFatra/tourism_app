@@ -14,7 +14,7 @@ final class HomeLoading extends HomeState {}
 final class HomeLoaded extends HomeState {
   final List<Destination> destinations;
 
-  HomeLoaded(this.destinations);
+  const HomeLoaded(this.destinations);
 
   @override
   List<Object> get props => [destinations];
@@ -23,7 +23,7 @@ final class HomeLoaded extends HomeState {
 final class HomeError extends HomeState {
   final String message;
 
-  HomeError(this.message);
+  const HomeError(this.message);
 
   @override
   List<Object> get props => [message];
