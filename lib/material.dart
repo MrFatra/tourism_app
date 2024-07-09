@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:tourism_app/helper/constant.dart';
+import 'package:tourism_app/widgets/appbar.dart';
 
 import 'screens/home.dart';
 
@@ -42,7 +43,12 @@ class MyMaterial extends StatelessWidget {
           ),
         ),
       ),
-      home: const Home(),
+      home: Builder(builder: (context) {
+        return Scaffold(
+          appBar: Navbar(init: true),
+          body: const Home(),
+        );
+      }),
     );
   }
 }
